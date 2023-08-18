@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+*{
+    margin:0; padding:0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+img{
+    display: block;
+}
+header{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+header img, footer img{
+    width: 40vw;
+}
+nav{
+    width: 100%;
+    display: flex;
+    background: rgb(249, 227, 227);
+    /* line-height: 60px; */
+}
+ul.gnb{
+    width: 80%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-around;
+}
+.gnb a{
+    padding: 10px;
+}
+.gnb a:hover{
+    background:rgb(242, 236, 236);
+    color: rgb(243, 87, 87);
+}
+.gnb li{
+    /* width: 12.5%; */
+    text-align: center;
+    color: rgb(189, 7, 7); 
+}
+#wrap{
+    width: 80%;
+    background: rgb(251, 3, 3);
+    margin: 0 auto;
+    position: relative;
+}
+#wrap img{
+    width: 100%;
+}
+ul.a{
+    width: 100%;
+    background: rgb(239, 161, 161);
+    display: flex;
+    flex-wrap: wrap;
+}
+.a li{
+    width: 33.3333%;
+}
+/* .a img{
+    width: 100%;
+} */
+ul.b{
+    
+    background: rgb(235, 209, 209);
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+/* .b img{
+    width: 33.3.%
+} */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: red;
+    
+
+}
+#wrap a{
+    outline: red solid 1px;
+    outline-offset: -1px;
+}
+#wrap a:hover{
+    outline: red solid 5px;
+    outline-offset: -5px;
+}
+
+.berger{
+    width: 40px;height: 40px;
+    position: absolute;
+    right: 25px;top: 70px;
+    /* left: 50px;top: 50px; */
+    transform: translate(0,-50%);
+    /* background: #fbd9d9; */
+    display: none;
+}
+
+.bar{
+    width: 40px;
+    height: 8px;
+    background: #f5dddd;
+    transition: .6s;
+}
+
+.bar:nth-child(2), .bar:nth-child(4){
+    position: relative;
+    top: 8px;
+}
+
+.berger.on .bar:nth-child(1),
+.berger.on .bar:nth-child(4){
+    opacity: 0;
+}
+.berger.on .bar:nth-child(2){
+    transform: rotate(45deg);
+}
+.berger.on .bar:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+
+.gnb_1{
+    position: absolute;
+   right: 0;
+   background: fff;
+   line-height: 40px;
+   width: 200px;
+   text-align: center;
+   display: none;
+
+}
+
+
+@media screen and (max-width:780px){
+    nav{display: none;}
+    /* #contents{width: ;} */
+    .berger{display: block;}
+    .gnb_1.on{display: block;}
+}
